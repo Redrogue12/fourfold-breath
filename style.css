@@ -1,0 +1,47 @@
+@font-face {
+  font-family: 'BispoNova';
+  src: url('./fonts/BispoNova-Regular.otf'); /* IE9 Compat Modes */
+  src: url('./fonts/BispoNova-Regular.otf') format('otf'), /* IE6-IE8 */
+       url('./fonts/BispoNova-Regular.otf') format('otf'), /* Super Modern Browsers */
+       url('./fonts/BispoNova-Regular.otf') format('otf'), /* Pretty Modern Browsers */
+       url('./fonts/BispoNova-Regular.otf')  format('otf'), /* Safari, Android, iOS */
+       url('./fonts/BispoNova-Regular.otf') format('otf'); /* Legacy iOS */
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  font-family: 'Amatic SC', cursive;
+  margin: 0;
+  height: 100vh;
+  background-image: url('./images/background.jpg');
+  background-size: cover;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+#counter {
+  text-align: center;
+  font-size: 128px;
+  color: #fff;
+  text-shadow: 1px 1px #000;
+}
+
+#step {
+  margin-top: 15px;
+  font-size: 64px;
+  color: #fff;
+  text-shadow: 1px 1px #000;
+}
+
+#buttons {
+  display: flex;
+  justify-content: center;
+}
