@@ -26,5 +26,7 @@
   "theme_color": "#00A896",
   "description": "Fourfold breath meditation app.",
   "dir": "ltr",
-  "lang": "en-US"
+  "lang": "en-US",
+  "prefer_related_applications": false
+
 }
