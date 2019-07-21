@@ -1,11 +1,16 @@
 {
   "name": "Fourfold Breath",
-  "short_name": "Fourfold",
+  "short_name": "Fourfold Breath",
   "icons": [
     {
       "src": "./images/snek-144.png",
       "type": "image/png",
       "sizes": "144x144"
+    },
+    {
+      "src": "./images/snek-144.png",
+      "type": "image/png",
+      "sizes": "192x192"
     },
     {
       "src": "./images/snek-520.png",
