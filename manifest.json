@@ -1,0 +1,25 @@
+{
+  "name": "Fourfold Breath",
+  "short_name": "Fourfold",
+  "icons": [
+    {
+      "src": "./images/snek-144.png",
+      "type": "image/png",
+      "sizes": "144x144"
+    },
+    {
+      "src": "./images/snek-520.png",
+      "type": "image/png",
+      "sizes": "520x520"
+    }
+  ],
+  "start_url": "/index.html",
+  "scope": ".",
+  "display": "fullscreen",
+  "orientation": "any",
+  "background_color": "#fff",
+  "theme_color": "#00A896",
+  "description": "Fourfold breath meditation app.",
+  "dir": "ltr",
+  "lang": "en-US"
+}
