@@ -1,11 +1,20 @@
 let counter = document.getElementById('counter')
 let step = document.getElementById('step')
 counter.innerHTML = "0";
+
+// Every second is a count and this value will be displayed
 let count = 1;
-let cycle = -1;
+
 let interval = null;
+
+// Displays the breathing steps and all four steps represent a cycle
 let steps = ["Breathe in", "Hold it", "Breathe out", "Hold it"];
 step.innerHTML = "Breathe in";
+
+// Cycle is initialized at -1 because the very first thing that happens in the app is cycle++
+let cycle = -1;
+
+// Audio file played whenever count is 1
 var audio = new Audio('./audio/boop.wav');
 
 // Starts counter and plays boop every 4 seconds
@@ -25,10 +34,9 @@ function startCount() {
       count++;
     }
 
+    // Cycle completed
     if (cycle > 3) cycle = 0;
-    console.log("cycle", cycle)
     step.innerHTML = steps[cycle];
-
   }, 1000)
 }
 
@@ -36,6 +44,6 @@ function startCount() {
 function stopCount() {
   clearInterval(interval)
   count = 1;
-  phase = 0;
+  cycle = -1;
   counter.innerHTML = "0";
 }
