@@ -2,6 +2,9 @@ let counter = document.getElementById('counter')
 let step = document.getElementById('step')
 counter.innerHTML = "0";
 
+// Play/Stop counter
+let isCounting = false;
+
 // Every second is a count and this value will be displayed
 let count = 1;
 
@@ -17,8 +20,19 @@ let cycle = -1;
 // Audio file played whenever count is 1
 var audio = new Audio('./audio/boop.wav');
 
+function toggleCounter() {
+  if (isCounting) {
+    isCounting = false;
+    stopCount();
+  } else {
+    isCounting = true;
+    Count();
+  }
+}
+
+
 // Starts counter and plays boop every 4 seconds
-function startCount() {
+function Count() {
   interval = setInterval( () => {
 
     if (count === 1) {
@@ -48,12 +62,20 @@ function stopCount() {
   counter.innerHTML = "0";
 }
 
-let deferredPrompt;
+if ('serviceWorker' in navigator) {
+  navigator.serviceWorker
+    .register('/service-worker.js')
+    .then(function() {
+      console.log("sw registered")
+    })
+}
 
-window.addEventListener('beforeinstallprompt', (e) => {
-  // Prevent Chrome 67 and earlier from automatically showing the prompt
-  e.preventDefault();
-  // Stash the event so it can be triggered later.
-  deferredPrompt = e;
-  console.log("beforeinstallprompt")
-});
+// let deferredPrompt;
+
+// window.addEventListener('beforeinstallprompt', (e) => {
+//   // Prevent Chrome 67 and earlier from automatically showing the prompt
+//   e.preventDefault();
+//   // Stash the event so it can be triggered later.
+//   deferredPrompt = e;
+//   console.log("beforeinstallprompt")
+// });
